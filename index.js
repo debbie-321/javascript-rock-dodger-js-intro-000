@@ -94,7 +94,7 @@ function createRock(x) {
      //If the rock reached the bottom of the GAME, we should remove the rock from the DOM.
    }
   }
-
+window.requestAnimationFrame(moveRock)
   // We should kick off the animation of the rock around here.
 
   // Add the rock to ROCKS so that we can remove all rocks
@@ -147,7 +147,7 @@ function moveDodgerLeft() {
    */
    window.requestAnimationFrame(function() {
     const left =positionToInteger(DODGER.style.left)
-    if (left>0) {
+    if (left > 0) {
       DODGER.style.left = `${left-4}px`
     }
   });
@@ -160,8 +160,8 @@ function moveDodgerRight() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
    window.requestAnimationFrame(function() {
-  const left =positionToInteger(DODGER.style.left)
-  if (left<360) {
+  const left = positionToInteger(DODGER.style.left)
+  if (left < 360) {
     DODGER.style.left = `${left+4}px`
   }
 });
@@ -176,7 +176,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  document.addEventListener('keydown', moveDodger)
+  window.addEventListener('keydown', moveDodger)
 
   START.style.display = 'none'
 
