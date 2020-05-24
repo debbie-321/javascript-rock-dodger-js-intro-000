@@ -86,7 +86,7 @@ var gameInterval = null
      * we should remove the rock from the DOM.
      */
   }
-  
+
     if (top < GAME_HEIGHT){
       window.requestAnimationFrame(moveRock);
     }
@@ -128,7 +128,7 @@ function endGame() {
 
 function moveDodger(e) {
 @@ -119,6 +127,17 @@ function moveDodger(e) {
-   
+
    if (e.which == LEFT_ARROW) {
      moveDodgerLeft();
      e.preventDefault();
